@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useReducer } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function reducer(state, action){
+  switch(action.type){
+    case "Multiply": return {count: state.count * 5};
+    case "Divide": return {count: state.count / 5}
+  }
+}
+
+function App(){
+
+const [state, dispatch] = useReducer(reducer, {count : 5} )
+
+  return(
+    <div>
+      <p>{state.count}</p>
+      <button onClick={()=> dispatch({type: "Multiply"})}>Multiply</button>
+      <button onClick={()=> dispatch({type: "Divide"})}>Divide</button>
     </div>
-  );
+  )
 }
 
 export default App;
