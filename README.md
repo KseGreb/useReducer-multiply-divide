@@ -1,3 +1,10 @@
+
+
+
+https://github.com/KseGreb/useReducer-multiply-divide/assets/110953599/85f19c40-5b60-4893-afa7-d7d1d25cd456
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
